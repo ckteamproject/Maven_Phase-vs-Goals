@@ -65,3 +65,40 @@ and to showcase how plugin executions can be bound to specific phases for **auto
      - `exec-maven-plugin` → package phase  
 
 4. **Run Maven Commands**
+5. 
+Check in the `target/` folder for:
+- `validate.txt`
+- `verify.txt`
+- `exec-package-run.txt`
+- `maven-phases-vs-goals-1.0-SNAPSHOT.jar`
+## 🧾 Output
+
+After executing all Maven lifecycle commands, the following results were observed:
+
+| Phase | Command | Output Generated |
+|--------|----------|------------------|
+| **Validate** | `mvn validate` | `target/validate.txt` created successfully |
+| **Compile** | `mvn compile` | Java files compiled to `target/classes` |
+| **Package** | `mvn package` | `maven-phases-vs-goals-1.0-SNAPSHOT.jar` created and `exec-package-run.txt` generated |
+| **Verify** | `mvn verify` | `target/verify.txt` created successfully |
+
+### Files Generated in `target/` Directory
+
+Each file corresponds to a specific build phase, showing how Maven plugins execute during each lifecycle step.
+
+---
+
+## 🧩 Conclusion
+
+The project successfully demonstrated the working of **Maven build phases** and **plugin goals**.  
+By binding plugin executions to specific phases like `validate`, `package`, and `verify`, the build process was fully automated.  
+
+This approach helps in:
+- Understanding Maven’s **lifecycle management**.  
+- Automating **build, packaging, and verification** tasks in a DevOps workflow.  
+- Ensuring **consistent and reproducible builds** across different environments.
+
+Overall, the project provides a clear and practical understanding of how Maven Phases and Goals function in real-world software automation.
+
+---
+
